@@ -5,7 +5,7 @@ let gameScore = document.querySelector(".score");
 let guessValue = document.querySelector(".guess");
 let gameHighScore = document.querySelector(".highscore");
 let secretNumber = document.querySelector(".number");
-let bgColor = document.querySelector("body");
+let bgColor = document.querySelector("body"); 
 let score = 20;
 let highscore = 0;
 let compNumber = Math.floor(Math.random() * 20 + 1);
@@ -16,7 +16,7 @@ const lossingCondition = (gameScore) => {
   } else {
     message.innerText = "You Lost";
     gameScore.innerText = 0;
-    againBtn.classlist.remove('hidden')
+    againBtn.classList.remove('hidden');
   }
 };
 checkBtn.addEventListener("click", () => {
@@ -25,7 +25,7 @@ checkBtn.addEventListener("click", () => {
     secretNumber.innerText = compNumber;
     message.innerText = "Correct Number";
     bgColor.style.backgroundColor = "#55aa3e";
-    againBtn.classlist.remove('hidden');
+    againBtn.classList.remove('hidden');
     if (gameScore.innerText > gameHighScore.innerText) {
       gameHighScore.innerText = score;
     }
@@ -48,6 +48,6 @@ againBtn.addEventListener("click", () => {
   secretNumber.innerText = "?";
   message.innerText = "Start Guessing...";
   guessValue.value = "";
-  againBtn.disabled = false;
-  checkBtn.classlist.add('hidden')
+  checkBtn.disabled = false;
+  againBtn.classList.add('hidden');
 });
