@@ -55,6 +55,9 @@ header {
     margin: 1.5rem 1.5rem;
   }
 }
+.hidden{
+  display: none;
+}
 main {
   height: 65vh;
   margin: 0rem auto;
