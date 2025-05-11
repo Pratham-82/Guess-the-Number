@@ -16,7 +16,7 @@ const lossingCondition = (gameScore) => {
   } else {
     message.innerText = "You Lost";
     gameScore.innerText = 0;
-    checkBtn.classlist.remove('hidden')
+    againBtn.classlist.remove('hidden')
   }
 };
 checkBtn.addEventListener("click", () => {
@@ -25,7 +25,7 @@ checkBtn.addEventListener("click", () => {
     secretNumber.innerText = compNumber;
     message.innerText = "Correct Number";
     bgColor.style.backgroundColor = "#55aa3e";
-    checkBtn.classlist.remove('hidden');
+    againBtn.classlist.remove('hidden');
     if (gameScore.innerText > gameHighScore.innerText) {
       gameHighScore.innerText = score;
     }
@@ -48,6 +48,6 @@ againBtn.addEventListener("click", () => {
   secretNumber.innerText = "?";
   message.innerText = "Start Guessing...";
   guessValue.value = "";
-  checkBtn.disabled = false;
+  againBtn.disabled = false;
   checkBtn.classlist.add('hidden')
 });
